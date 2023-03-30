@@ -8,7 +8,7 @@ export type Post = {
     "body": string
 }
 
-type NewPost = {
+export type NewPost = {
     "title": string;
     "body": string;
 };

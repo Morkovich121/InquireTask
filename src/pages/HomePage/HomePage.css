@@ -19,8 +19,6 @@
     gap: 20px;
     box-sizing: border-box;
     padding: 0 20px;
-    margin-bottom: -20px;
-
 }
 
 .search-posts input:focus {
@@ -42,4 +40,23 @@
     gap: 10px;
     font-size: 22px;
     font-weight: 600;
+}
+
+.add-post {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-bottom: -35px;
+}
+
+.disabled-background {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 5px);
+    background-color: darkgray;
+    margin-top: -30px;
+    z-index: 10;
+    opacity: 0.4;
 }

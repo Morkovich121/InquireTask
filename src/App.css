@@ -6,6 +6,7 @@
 .App {
   text-align: center;
   background-color: rgb(245, 235, 227);
+  position: relative;
 }
 
 .App-logo {
