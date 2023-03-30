@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 type Comment = {
     "postId": number,
@@ -57,8 +57,10 @@ export const createComment = createAsyncThunk<Comment, NewComment, { rejectValue
             const createdComment = await response.json();
 
             return createdComment;
-        } catch (error: any) {
-            throw new Error('Server Error!');
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                throw new Error('Server Error!');
+            }
         }
     }
 )

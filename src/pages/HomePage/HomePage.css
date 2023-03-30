@@ -1,0 +1,45 @@
+.blog-name {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 25px 5px;
+}
+
+.search-posts {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-bottom: -20px;
+
+}
+
+.search-posts input:focus {
+    outline: none;
+}
+
+.search-posts input {
+    width: 320px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.found-posts {
+    display: flex;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}

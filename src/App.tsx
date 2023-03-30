@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 
-import { useAppDispatch, useAppSelector } from './app/hooks';
-import { fetchPosts, createPost, updatePost, deletePost } from './app/slices/postSlice';
-import { fetchPostComments } from "./app/slices/commentSlice";
+import { useAppDispatch } from './app/hooks';
+import { fetchPosts } from './app/slices/postSlice';
+
+import HomePage from "./pages/HomePage/HomePage";
 
 import './App.css';
 
@@ -13,12 +13,12 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchPosts());
-    dispatch(fetchPostComments(3));
   }, [dispatch])
 
 
   return (
     <div className="App">
+      <HomePage />
     </div>
   );
 }

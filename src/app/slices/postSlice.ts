@@ -1,8 +1,8 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 const apiLink = 'https://blog-api-t6u0.onrender.com/posts'
 
-type Post = {
+export type Post = {
     "id": number,
     "title": string,
     "body": string
@@ -54,8 +54,10 @@ export const createPost = createAsyncThunk<Post, NewPost, { rejectValue: string 
             const createdPost = await response.json();
 
             return createdPost;
-        } catch (error: any) {
-            throw new Error('Server Error!');
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                throw new Error('Server Error!');
+            }
         }
     }
 );
@@ -84,8 +86,10 @@ export const updatePost = createAsyncThunk<Post, { id: number, updatedPost: NewP
         try {
             const response = await putPost(id, updatedPost);
             return response;
-        } catch (error: any) {
-            return rejectWithValue(error.message);
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                return rejectWithValue(error.message);
+            }
         }
     }
 );
@@ -100,7 +104,6 @@ export const deletePost = createAsyncThunk<number, number, { rejectValue: string
         if (!response.ok) {
             throw new Error('Server Error!');
         }
-        const data = await response.json();
         return id;
     }
 );
