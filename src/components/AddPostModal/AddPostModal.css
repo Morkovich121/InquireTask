@@ -11,5 +11,6 @@
 
 .textArea {
     min-width: 100%;
-    min-height: 70px
+    min-height: 70px;
+    max-height: 400px;
 }

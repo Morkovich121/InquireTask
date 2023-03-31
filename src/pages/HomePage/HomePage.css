@@ -9,6 +9,7 @@
     align-items: center;
     gap: 40px;
     padding: 25px 5px;
+    background-color: rgb(245, 235, 227);
 }
 
 .search-posts {

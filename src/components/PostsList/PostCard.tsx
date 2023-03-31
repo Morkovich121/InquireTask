@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { Card, CardContent, Typography, Button } from "@mui/material";
+import { Card, CardContent, Typography, Button, Link } from "@mui/material";
 
 import { deletePost, fetchPosts, Post } from '../../app/slices/postSlice';
 import rightArrow from '../../images/rightArrow.png';
@@ -47,11 +47,14 @@ const PostCard = ({ post }: Props) => {
                         Delete
                     </Button>
                     <span className='link'>
-                        Read more <img src={rightArrow} alt="" className='linkArrow' />
+                        <Link className='link' sx={{
+                            textDecoration: 'none',
+                            color: 'black',
+                        }} href={`/post/${post.id}`}>Read more <img src={rightArrow} alt="" className='linkArrow' /></Link>
                     </span>
                 </div>
             </CardContent>
-        </Card>
+        </Card >
     )
 }
 

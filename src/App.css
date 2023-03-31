@@ -5,13 +5,17 @@
 
 .App {
   text-align: center;
-  background-color: rgb(245, 235, 227);
   position: relative;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+body{
+  background-color: rgb(245, 235, 227);
+
 }
 
 @media (prefers-reduced-motion: no-preference) {

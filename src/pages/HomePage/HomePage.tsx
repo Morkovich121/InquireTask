@@ -7,8 +7,9 @@ import PostsList from '../../components/PostsList/PostsList';
 
 import { Post, NewPost, createPost } from '../../app/slices/postSlice';
 
-import './HomePage.css';
 import AddPostModal from '../../components/AddPostModal/AddPostModal';
+
+import './HomePage.css';
 
 const HomePage = () => {
 

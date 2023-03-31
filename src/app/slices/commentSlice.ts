@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-type Comment = {
+export type Comment = {
     "postId": number,
     "id": number,
     "name": string,
@@ -8,7 +8,7 @@ type Comment = {
     "body": string
 }
 
-type NewComment = {
+export type NewComment = {
     "postId": number,
     "name": string,
     "email": string,

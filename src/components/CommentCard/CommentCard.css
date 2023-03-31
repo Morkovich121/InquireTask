@@ -1,0 +1,23 @@
+.comment__root {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px
+}
+
+.comment__avatar {
+    background-color: #1976d2;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.comment__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.comment__content span:first-of-type {
+    font-weight: 700;
+}
